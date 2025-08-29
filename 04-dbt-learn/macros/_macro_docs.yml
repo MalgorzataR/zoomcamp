@@ -1,0 +1,19 @@
+macros:
+  - name: cents_to_dollars
+    description: A macro that converts dollars to cents and rounds it to X decimal places, or 2 if none provided
+    arguments:
+      - name: column_name
+        type: string
+        description: The name of the column yyou want to convert
+      - name: decimals
+        type: intiger
+        description: number of decimal palces, default = 2
+  - name: grant_select
+    description: a macro that grants select privs on target.schema to target.role unless otherwise specified
+    arguments:
+        - name: schema
+          description: schema we want to grant privs
+          type: string
+        - name: role
+          description: role to grant privs
+          type: string
